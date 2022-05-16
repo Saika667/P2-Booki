@@ -47,7 +47,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: auto;
 }
 
 nav {
@@ -300,6 +299,7 @@ main {
 #more {
     width: 100%;
     padding: 20px 0 40px 20px;
+    cursor: pointer;
 }
 
 #popular {
@@ -659,8 +659,18 @@ footer h3 {
     body {
         padding: 0;
     }
+
     body > *:not(footer) {
         padding: 0;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    header > *:not(nav):not(form) {
+        padding: 0 5%;
+        box-sizing: border-box;
     }
 
     h2 {
@@ -719,15 +729,19 @@ footer h3 {
     }
 
     form {
+        padding: 0;
         min-width: 90%;
         margin: 8% auto;
+        height: 40px;
     }
 
     input {
-        min-width: 65%;
+        min-width: 70%;
     }
+
     #buttonResearchDesktop {
         display: none;
+        min-width: 13.5%;
     }
     
     #buttonResearchPhone {
