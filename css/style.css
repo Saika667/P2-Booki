@@ -10,8 +10,6 @@ body {
 }
 
 body > *:not(footer) {
-    padding: 0 5%;
-    box-sizing: border-box;
     margin: 0 auto;
 }
 
@@ -37,12 +35,6 @@ h3 {
 
 p {
     font-size: 14px;
-}
-@media all and (min-width: 1920px) {
-    body > *:not(footer) {
-        max-width: 1920px;
-        margin: 0 auto;
-    }
 }
 /*-------------------------------------------------------------------------------------
                                         FIN Base
@@ -267,6 +259,7 @@ main {
     cursor: pointer;
     transform: scale(1);
     transition: transform 400ms;
+    position: relative;
 }
 
 .housingAd h3 {
@@ -274,8 +267,9 @@ main {
 }
 
 .housingAd p {
-    margin: 0 0 4% 10px;
+    margin: 0 0 0 10px;
 }
+
 .housingAd img {
     width: 100%;
     height: 60%;
@@ -284,9 +278,15 @@ main {
     border-radius: 18px 18px 0 0;
 }
 
+.housingAd .starNote {
+    bottom: 5px;
+}
+
 .starNote {
     font-size: 10px;
     margin-left: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 .starBlue {
@@ -354,14 +354,15 @@ main {
 .popularAdDescription {
     width: 60%;
     height: 100%;
+    position: relative;
 }
 
 .popularAdDescription h3 {
     margin: 1% 0 5% 10px;
 }
 
-.popularAdDescription p {
-    margin: 0 0 30% 10px;
+.popularAdDescription p {    
+    margin: 0 0 0 10px;
 }
 /*-------------------------------------------------------------------------------------
                                         Ad:hover
@@ -495,10 +496,30 @@ footer h3 {
 /*-------------------------------------------------------------------------------------
                                     Breakpoints
 -------------------------------------------------------------------------------------*/
+@media all and (min-width: 1920px) {
+    body > *:not(footer) {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+@media all and (min-width: 993px) and (max-width: 1148px) {
+    #filterContainer {
+        width: 85%;
+    }
+
+    .popularAdDescription h3 {
+        font-size: 14px;
+    }
+
+    .containerAdStyle h3 {
+        padding: 8px 0 0 20px;
+    }
+}
 /*-------------------------------------------------------------------------------------
                                     Breakpoint tablette
 -------------------------------------------------------------------------------------*/
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 769px) and (max-width: 992px) {
 /*------------------------------------------------------------
                             Base
 -------------------------------------------------------------*/
@@ -522,6 +543,7 @@ footer h3 {
     #title h2 {
         margin-top: 2%;
     }
+
     form {
         max-width: 50%;
     }
@@ -561,14 +583,11 @@ footer h3 {
         margin-bottom: 6%;
     }
 
-    .popularAdDescription p {
-        margin: 0 0 25% 10px;
-    }
-
     #logement {
         width: 100%;
         align-self: center;
     }
+
     #housingTitle {
         width: 90%;
         margin: auto;
@@ -583,6 +602,10 @@ footer h3 {
     .housingAd {
         width: 40%;
         margin-bottom: 5%;
+    }
+
+    .housingAd h3 {
+        margin: 1% 0 2% 10px;
     }
 
     .activitiesAd {
@@ -629,7 +652,7 @@ footer h3 {
 /*-------------------------------------------------------------------------------------
                                     Breakpoint telephone
 -------------------------------------------------------------------------------------*/
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 /*------------------------------------------------------------
                             Base
 -------------------------------------------------------------*/
@@ -746,7 +769,7 @@ footer h3 {
     }
 
     #headerInfoContainerI {
-        margin: 2% 3% 12% 0;
+        margin: 2% 3% 9% 0;
     }
 /*------------------------------------------------------------
                             FIN Header
@@ -786,10 +809,6 @@ footer h3 {
         margin-bottom: 4%;
     }
 
-    .popularAdDescription p {
-        margin: 0 0 18% 10px;
-    }
-
     #logement {
         width: 100%;
         background-color: white;
@@ -812,7 +831,6 @@ footer h3 {
     }
 
     .housingAd p {
-        margin: 0 0 2% 10px;
         font-size: 16px;
     }
 
