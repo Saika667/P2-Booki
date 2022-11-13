@@ -7,3 +7,4 @@ Il suffit de cloner le dépôt et d'ouvrir le fichier `index.html` dans le navig
 
 **Spécificités du projet**
 - Responsive
+- Utilisation de `display : grid` interdite
